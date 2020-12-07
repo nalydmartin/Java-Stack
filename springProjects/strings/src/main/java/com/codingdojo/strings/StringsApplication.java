@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 
 @RestController
+@RequestMapping("/cool")
 public class StringsApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(StringsApplication.class, args);
 	}
-
 	
 	
-	@RequestMapping("/")
-	public String hello() {
+	@RequestMapping("")
+	public String hello() {		
 		return "Hello Worlds!";
 	}
 	
