@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+//import org.springframework.web.bind.annotation.PutMapping;
 
+//import com.codingdojo.updateanddelete.controllers.BooksAPI;
 import com.codingdojo.updateanddelete.models.Book;
 import com.codingdojo.updateanddelete.repositories.BookRepository;
 
@@ -29,6 +31,28 @@ public class BookService {
     public Book createBook(Book b) {
         return bookRepository.save(b);
     }
+    
+    
+    // updates a book
+    //    @PutMapping("/api/books/{id}")
+    public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
+    	Book book = this.findBook(id);
+    	
+    	book.setTitle(title);
+    	book.setDescription(desc);
+    	book.setLanguage(lang);
+    	book.setNumberOfPages(numOfPages);
+    	
+    	bookRepository.save(book);
+    	return book;
+    }
+    
+    // Deletes a book
+    
+    public void deleteBook(Long id) {
+    	bookRepository.deleteById(id);
+    }
+    
     
     
     // retrieves a book
