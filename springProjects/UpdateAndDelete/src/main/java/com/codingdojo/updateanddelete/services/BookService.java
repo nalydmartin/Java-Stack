@@ -33,7 +33,7 @@ public class BookService {
     }
     
     
-    // updates a book
+    // updates a book from the API
     //    @PutMapping("/api/books/{id}")
     public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
     	Book book = this.findBook(id);
@@ -47,12 +47,19 @@ public class BookService {
     	return book;
     }
     
-    // Deletes a book
     
+    // updates a book from the booksController
+    
+    public Book updateBook(Book book) {
+
+    	bookRepository.save(book);
+    	return book;
+    }
+    
+    // Deletes a book
     public void deleteBook(Long id) {
     	bookRepository.deleteById(id);
     }
-    
     
     
     // retrieves a book
