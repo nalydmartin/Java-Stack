@@ -19,14 +19,19 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     @Size(min = 5, max = 200)
     private String title;
+    
     @Size(min = 5, max = 200)
     private String description;
+    
     @Size(min = 3, max = 40)
     private String language;
+    
     @Min(2)
     private Integer numberOfPages;
+    
     // This will not allow the createdAt column to be updated after creation
     @Column(updatable=false)
     @DateTimeFormat(pattern="yyyy-MM-dd")
