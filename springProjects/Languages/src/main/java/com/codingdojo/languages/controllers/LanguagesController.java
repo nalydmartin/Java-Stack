@@ -28,7 +28,7 @@ public class LanguagesController {
 	
 	
 	@RequestMapping("/languages")
-	public String index(Model model, @ModelAttribute("language") Language lang) {
+	public String index(Model model, @ModelAttribute("Language") Language lang) {
 		
 		List<Language> languages = langService.allLanguages();
 		
@@ -39,14 +39,14 @@ public class LanguagesController {
 	
 	
 	@RequestMapping("/languages/new")
-	public String newLanguage(@ModelAttribute("language") Language lang) {
+	public String newLanguage(@ModelAttribute("Language") Language lang) {
 		
 		return "/languages/index.jsp";
 	}
 	
 	
 	@RequestMapping(value="/languages", method=RequestMethod.POST)
-	public String create(@Valid @ModelAttribute("language") Language lang, 
+	public String create(@Valid @ModelAttribute("Language") Language lang, 
 			BindingResult result) {
 		
 		if(result.hasErrors()) {
@@ -77,7 +77,7 @@ public class LanguagesController {
 	
 	
 	@RequestMapping(value="/languages/{id}", method=RequestMethod.POST) 
-	public String update(@Valid @ModelAttribute("language") Language lang, BindingResult result) {
+	public String update(@Valid @ModelAttribute("Language") Language lang, BindingResult result) {
 		
 		if (result.hasErrors()) {
 			return "/languages/edit.jsp";

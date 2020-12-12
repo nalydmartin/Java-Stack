@@ -19,7 +19,7 @@
 
 	<a href="/languages">Dashboard</a>
 	
-	<form action="/languages/${lang.id}" method="post">
+	<form action="/languages/${languages.id}" method="post">
 	
 		<input type="hidden" name="_method" value="delete">
 		<input type="submit" value="Delete">
