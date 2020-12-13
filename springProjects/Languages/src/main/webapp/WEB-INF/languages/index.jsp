@@ -29,7 +29,7 @@
 		<tbody>
 			<c:forEach items="${languages}" var="lang">
 			<tr>
-				<td><c:out value="${lang.name}"/></td>
+				<td><a href="/languages/${lang.id}">${lang.name}</a></td>
 				<td><c:out value="${lang.creator}"/></td>		
 				<td><c:out value="${lang.currentVersion}"/></td>
 				<td><form action="/languages/${lang.id}" method="post">
