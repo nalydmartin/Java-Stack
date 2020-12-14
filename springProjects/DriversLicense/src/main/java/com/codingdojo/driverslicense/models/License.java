@@ -29,6 +29,8 @@ public class License {
     
     private String number;
     
+    //private Integer numberUp;
+    
     @Future
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date expirationDate;
@@ -79,6 +81,15 @@ public class License {
 	public void setNumber(String number) {
 		this.number = number;
 	}
+	
+
+//	public Integer getNumberUp() {
+//		return numberUp;
+//	}
+//
+//	public void setNumberUp(Integer numberUp) {
+//		this.numberUp = numberUp;
+//	}
 
 	public Date getExpirationDate() {
 		return expirationDate;

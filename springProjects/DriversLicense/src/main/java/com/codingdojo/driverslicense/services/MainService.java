@@ -62,14 +62,21 @@ public class MainService {
 	// Saves a new license to the database--------------------------------------------
 	public License createLicense(License license) {
 		
-	//		Long newNum = Long.parseLong("" + license.getId());
-		
-		license.setNumber(String.format("%06d", license.getId() ) );
-		
+//		Integer temp = license.getNumberUp();
+//		
+//		if(temp == null) {
+//			temp = 0;
+//			temp++;
+//			license.setNumberUp(temp);
+//		} else {
+//			temp++;
+//			license.setNumberUp(temp);
+//		}
+//		
+//		license.setNumber(String.format("%06d", temp ) );
+//		System.out.println(license.getNumberUp());
 		lRepo.save(license);
 		return license;
 	}
-	
-	
 
 }

@@ -76,6 +76,7 @@ public class MainController {
 			return "newlicense.jsp";
 		} else {
 			
+			license.setNumber(String.format("%06d", license.getPerson().getId()));
 			mServ.createLicense(license);
 			return "redirect:/persons/" + license.getId();
 		}

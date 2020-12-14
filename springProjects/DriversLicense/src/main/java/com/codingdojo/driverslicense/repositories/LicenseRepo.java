@@ -14,4 +14,8 @@ public interface LicenseRepo extends CrudRepository<License, Long>{
 	// Retrieve all licenses in the database
 
 	List<License> findAll();
+	
+	
+	
+	
 }
