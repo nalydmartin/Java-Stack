@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2576
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 AndaleMono;
+}
+{\colortbl;\red255\green255\blue255;\red244\green0\blue95;\red11\green13\blue26;\red255\green255\blue255;
+\red38\green38\blue38;\red242\green242\blue242;\red242\green242\blue242;}
+{\*\expandedcolortbl;;\cssrgb\c97647\c14902\c44706;\cssrgb\c4314\c6275\c13333;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c20000\c20000\c20000;\cssrgb\c96078\c96078\c96078;\cssrgb\c96078\c96078\c96078;}
+\margl1440\margr1440\vieww17980\viewh13100\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \
+1. Add dependencies to pom.xml\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 		<\cf4 \strokec4 dependency\cf2 \strokec2 >\cf4 \strokec4 \
+                \cf2 \strokec2 <\cf4 \strokec4 groupId\cf2 \strokec2 >\cf4 \strokec4 org.apache.tomcat.embed\cf2 \strokec2 <\cf4 \strokec4 /groupId\cf2 \strokec2 >\cf4 \strokec4 \
+                \cf2 \strokec2 <\cf4 \strokec4 artifactId\cf2 \strokec2 >\cf4 \strokec4 tomcat\cf2 \strokec2 -\cf4 \strokec4 embed\cf2 \strokec2 -\cf4 \strokec4 jasper\cf2 \strokec2 <\cf4 \strokec4 /artifactId\cf2 \strokec2 >\cf4 \strokec4 \
+        \cf2 \strokec2 <\cf4 \strokec4 /dependency\cf2 \strokec2 >\cf4 \strokec4 \
+        \cf2 \strokec2 <\cf4 \strokec4 dependency\cf2 \strokec2 >\cf4 \strokec4 \
+                \cf2 \strokec2 <\cf4 \strokec4 groupId\cf2 \strokec2 >\cf4 \strokec4 javax.servlet\cf2 \strokec2 <\cf4 \strokec4 /groupId\cf2 \strokec2 >\cf4 \strokec4 \
+                \cf2 \strokec2 <\cf4 \strokec4 artifactId\cf2 \strokec2 >\cf4 \strokec4 jstl\cf2 \strokec2 <\cf4 \strokec4 /artifactId\cf2 \strokec2 >\cf4 \strokec4 \
+        \cf2 \strokec2 <\cf4 \strokec4 /dependency\cf2 \strokec2 >\cf4 \strokec4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+2. Create web app folders\
+\
+	\'97 src / main / webapp \
+\
+	\'97 src / main / webapp / WEB-INF\
+\
+	\'97 src / main / resources / applications.properties\
+		\'97 Add code line 
+\f2 \cf5 \cb6 \expnd0\expndtw0\kerning0
+spring.mvc.view.prefix=/WEB-INF/
+\fs24 \
+
+\f0\fs28 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+3. Add \'93index.jsp\'94 to WEB-INF folder\
+\
+	\'97 Add code line to .jsp file\
+		
+\f2 \cf5 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>\
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+
+\f2 \cf5 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 	\'97 Syntax to print variables from the backend\
+\pard\pardeftab720\sl340\partightenfactor0
+\cf5 		<c:out value="$\{2+2\}"/>\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+4. \
+}
